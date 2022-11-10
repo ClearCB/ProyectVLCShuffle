@@ -100,3 +100,45 @@ def printSongSelected(playlist):
         print(str(songNum + ": " + str(playlist[songNum])))
 
 
+# Now we make the program to execute VLC
+
+def launchVLC(library,playlist):
+
+    # we need to find the songs at the "library" directory
+
+    import subprocess
+    import shlex
+    import os
+    
+    windowsPathVLC = "C:\Users\xuloa\OneDrive\Escritorio\vlc"
+    windowsCommandLine = windowsPathVLC
+    separator = " "
+
+
+    for numSong in sorted(playlist.keys()):
+
+        randomSong = playlist[numSong]
+        try:
+            pathAcces = library[randomSong]["location"]
+        except KeyError:
+            print("the song is not at the library") 
+        else:
+            # we check if the path is correct
+            if os.path.exists(str(pathAcces)):
+                windowsCommandLine = windowsCommandLine + separator + str(pathAcces)
+            else:
+                pass
+    args = shlex.split(windowsCommandLine)
+
+    try:
+        
+        procesVlc = subprocess.Popen(args)
+        
+    except:
+        print("the archive does not exist")
+
+    except:
+        print("Not valid arguments")
+    else:
+        print("Launching VLC with random playlist")
+
