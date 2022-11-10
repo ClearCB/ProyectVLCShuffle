@@ -1,3 +1,5 @@
+import random
+
 # The parametres is a song and a library in which one we will check it
 
 def songIsInList(song, library):
@@ -34,3 +36,23 @@ def songIsUnique(playlist):
             return False
         else:
             return True
+
+# Now we will make a module to select a random song, but first we will check if the library is a dict
+# so we can continue.
+def selectRandomSong(library):
+
+    assert isinstance (library,dict)
+
+    # No we will take the title of the song from the library so we have a random song
+
+    randomSong = random.choice(list(library.keys()))
+
+    # After we selected a random song, we have to confirm that is actualy a song in the list and its not other
+
+    assert songIsInList(randomSong, library)
+
+    # And we return the name of the song
+
+    return str(randomSong)
+
+    
