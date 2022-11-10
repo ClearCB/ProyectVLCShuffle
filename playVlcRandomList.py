@@ -82,3 +82,21 @@ def playlistCreate(songNum):
         return keyNumPlaylist
         
     return songAppend
+
+# Now we will print which songs are we going to use in our playlist
+
+def printSongSelected(playlist):
+    
+    # We check if its a dict
+
+    assert isinstance(playlist,dict)
+
+    keysSorted = sorted(playlist.keys())
+
+    # Now we iterate the keysSorted to print each song and its order
+
+    for songNum in keysSorted:
+
+        print(str(songNum + ": " + str(playlist[songNum])))
+
+

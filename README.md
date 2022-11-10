@@ -14,4 +14,6 @@ Then ill make a module called "songIsUnique" and it will check if the song is re
 
 Since i forgot to import random and it will be needed later, ill import at this commit and add a new feature that will select a random song from the library.
 
-We add a new featur which consist on creating a playlist so we have our dictionary with the songs.
+We add a new featur which consist on creating a playlist so we have our dictionary with the songs
+
+Then we will add the number of the song and each title.
