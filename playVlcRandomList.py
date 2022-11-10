@@ -53,6 +53,32 @@ def selectRandomSong(library):
 
     # And we return the name of the song
 
-    return str(randomSong)
+    return str(randomSong), "The song is not a key from the library dictionary"
 
-    
+# Now, we will start creating the playlist dictionary, in which keys are integrers and values the name of the song.
+
+def playlistCreate(songNum):
+
+    keyNumPlaylist = songNum
+
+    # Now we create a functions that will append the song name at the playlist dict
+
+    def songAppend (song, playlist):
+
+        # Now we will check if the playlist is a dict and that the song is not already in the playlist
+
+        listValuesPlaylist = list(playlist.values())
+
+        assert isinstance(playlist, dict), "playlist is not a dictionary"
+        assert song not in listValuesPlaylist
+
+        # Now we will start adding numbers to the index dicc so we add in a different spot the song we get
+
+        nonlocal keyNumPlaylist
+        keyNumPlaylist += 1
+        
+        # Now we relate the value and the key to the playlist dict 
+        playlist[keyNumPlaylist] = str(song)
+        return keyNumPlaylist
+        
+    return songAppend
