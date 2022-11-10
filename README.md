@@ -6,7 +6,7 @@ I'll follow the code of my teacher and i'll try to implement everychange with gi
 
 ## First step
 
-First of all i'll create modules that will allow me to check if the input is the correct one. 
+First of all i'll create modules that will allow me to check if the input is the correct one.
 
 The first module will be called "songIsInList" and it will check if the song is acctually at the list.
 
