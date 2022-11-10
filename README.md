@@ -17,3 +17,7 @@ Since i forgot to import random and it will be needed later, ill import at this 
 We add a new featur which consist on creating a playlist so we have our dictionary with the songs
 
 Then we will add the number of the song and each title.
+
+After all this, we will make a program to executa VLC and to get all the songs. So we need to create a folder called "library" in which we will have the songs we have to make the list. 
+
+To make this proces, we will have to import three basics libraries from python to execute the program (subprocess, shlex and os)
