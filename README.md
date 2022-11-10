@@ -13,3 +13,5 @@ The first module will be called "songIsInList" and it will check if the song is 
 Then ill make a module called "songIsUnique" and it will check if the song is repeated or not.
 
 Since i forgot to import random and it will be needed later, ill import at this commit and add a new feature that will select a random song from the library.
+
+We add a new featur which consist on creating a playlist so we have our dictionary with the songs.
