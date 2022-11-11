@@ -177,6 +177,6 @@ def playSuffleVLC (library, playlist):
     launchVLC (library, playlist)
 
 playlist = {}
-library = {"against the moon.mp3":{r"C:\Users\xuloa\OneDrive\Escritorio\DAW escritorio\PROGRAMACION\vlc songs\biblioteca-20221110T230948Z-001\library\against the moon.mp3"}}
+library = {{'California Über Alles': {'artist': 'Dead Kennedys', 'album': 'Fresh Fruit for Rotting Vegetables [Bonus Disc] Disc 1', 'location': 'file:///home/david/Escritorio/Programacion/codigo/play_shuffle_VLC/biblioteca/California_Uber_Alles.mp3'}, 'King Kunta': {'artist': 'Kendrick Lamar', 'album': 'To Pimp A Butterfly', 'location': 'file:///home/david/Escritorio/Programacion/codigo/play_shuffle_VLC/biblioteca/King_Kunta.mp3'}, 'Seattle Party': {'artist': 'Chastity Belt', 'album': 'No Regerts', 'location': 'file:///home/david/Escritorio/Programacion/codigo/play_shuffle_VLC/biblioteca/Seattle_Party.flac'}}}
 
 playSuffleVLC (library, playlist)
