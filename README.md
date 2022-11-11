@@ -4,6 +4,8 @@ Make a program in python that creates a random song list and reproduces it at VL
 
 I'll follow the code of my teacher and i'll try to implement everychange with git.
 
+Firts i will try to replicate his code and then ill make it bymyself, this exercise is to train git and their commands.
+
 ## First step
 
 First of all i'll create modules that will allow me to check if the input is the correct one.

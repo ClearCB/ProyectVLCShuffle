@@ -31,7 +31,7 @@ def songIsUnique(playlist):
 
     for i in playlist:
 
-        iCount = playlist.count(i)
+        iCount = playlistValues.count(i)
         if iCount > 1:
             return False
         else:
@@ -97,7 +97,7 @@ def printSongSelected(playlist):
 
     for songNum in keysSorted:
 
-        print(str(songNum + ": " + str(playlist[songNum])))
+        print(str(songNum) + ": " + str(playlist[songNum]))
 
 
 # Now we make the program to execute VLC
@@ -110,7 +110,7 @@ def launchVLC(library,playlist):
     import shlex
     import os
     
-    windowsPathVLC = "C:\Users\xuloa\OneDrive\Escritorio\vlc"
+    windowsPathVLC = r"C:\Users\xuloa\OneDrive\Escritorio\vlc\vlc.exe"
     windowsCommandLine = windowsPathVLC
     separator = " "
 
@@ -125,7 +125,7 @@ def launchVLC(library,playlist):
         else:
             # we check if the path is correct
             if os.path.exists(str(pathAcces)):
-                windowsCommandLine = windowsCommandLine + separator + str(pathAcces)
+                windowsCommandLine = (windowsCommandLine + separator + str(pathAcces))
             else:
                 pass
     args = shlex.split(windowsCommandLine)
@@ -134,10 +134,11 @@ def launchVLC(library,playlist):
         
         procesVlc = subprocess.Popen(args)
         
-    except:
+    except OSError:
         print("the archive does not exist")
 
-    except:
+    except ValueError:
+
         print("Not valid arguments")
     else:
         print("Launching VLC with random playlist")
@@ -166,3 +167,16 @@ def playShuffle(library, playlist):
     assert songIsUnique(playlist)
 
     return True
+
+# MAIN PROGRAM
+
+def playSuffleVLC (library, playlist):
+
+    playShuffle (library, playlist)
+    printSongSelected ( playlist)
+    launchVLC (library, playlist)
+
+playlist = {}
+library = {"against the moon.mp3":{r"C:\Users\xuloa\OneDrive\Escritorio\DAW escritorio\PROGRAMACION\vlc songs\biblioteca-20221110T230948Z-001\library\against the moon.mp3"}}
+
+playSuffleVLC (library, playlist)
