@@ -9,8 +9,6 @@ def conseguirLugarCanciones(libreria):
         cancionLocalizacion = libreria[cancion]["location"]
         diccLugaresCancion[cancion] = cancionLocalizacion
     
-
-    print(diccLugaresCancion)
     return diccLugaresCancion
 
 if __name__ == "__main__":
