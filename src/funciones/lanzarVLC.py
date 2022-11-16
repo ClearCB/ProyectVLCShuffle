@@ -1,9 +1,10 @@
 import subprocess
+import shlex
 
 def lanzarVLC(libreriaLugarPosYNombre):
 
     rutas = []
-    comandoExeVlc = "C:\\Users\\xuloa\\OneDrive\\Escritorio\\vlc"
+    comandoExeVlc = r"D:\vlc\vlc"
     lineaComando = comandoExeVlc
     separador = " "
 
@@ -18,10 +19,9 @@ def lanzarVLC(libreriaLugarPosYNombre):
         for cancionNombre in dictCancionKeys:
 
             ruta = dictCancion[cancionNombre]
-            lineaComando = lineaComando + separador + ruta
+            lineaComando = lineaComando + separador + str(ruta)
 
-    args = lineaComando.split(" ")
-    ejecutarVLC = subprocess.Popen(args)
+    ejecutarVLC = subprocess.run(lineaComando)
 
 
 
@@ -29,6 +29,6 @@ def lanzarVLC(libreriaLugarPosYNombre):
 
 if __name__ == "__main__":
 
-    libreriaLugarPosYNombre =  {2: {'California Uber Alles': 'C:\\Users\\abelc\\Desktop\\PROYECTO-PYTHO\\libreria\\California_Uber_Alles.mp3'}, 3: {'King Kunta': 'C:\\Users\\abelc\\Desktop\\PROYECTO-PYTHO\\libreria\\King_Kunta.mp3'}, 4: {'Against the moon': 'C:\\Users\\abelc\\Desktop\\PROYECTO-PYTHO\\libreria\\against_the_moon.mp3'}, 5: {'Headless': 'C:\\Users\\abelc\\Desktop\\PROYECTO-PYTHO\\libreria\\Headless.mp3'}}
+    libreriaLugarPosYNombre =  {2: {'California Uber Alles': r'C:\Users\abelc\Desktop\PROYECTO-PYTHO\libreria\California_Uber_Alles.mp3'}, 3: {'King Kunta': r'C:\Users\abelc\Desktop\PROYECTO-PYTHO\libreria\King_Kunta.mp3'}, 4: {'Against the moon': r'C:\Users\abelc\Desktop\PROYECTO-PYTHO\libreria\against_the_moon.mp3'}, 5: {'Headless': r'C:\Users\abelc\Desktop\PROYECTO-PYTHO\libreria\Headless.mp3'}}
 
     lanzarVLC(libreriaLugarPosYNombre)
