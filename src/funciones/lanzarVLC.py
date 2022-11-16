@@ -3,7 +3,7 @@ import subprocess
 def lanzarVLC(libreriaLugarPosYNombre):
 
     rutas = []
-    comandoExeVlc = "D:\VLC\\vlc.exe"
+    comandoExeVlc = "C:\\Users\\xuloa\\OneDrive\\Escritorio\\vlc"
     lineaComando = comandoExeVlc
     separador = " "
 

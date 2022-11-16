@@ -1,5 +1,5 @@
 import pytest
-from src.crearListaCanciones import crearListaCanciones
+from src.funciones.crearListaCanciones import crearListaCanciones
 
 libreria = {"California Uber Alles":
                 {"track-number": 2, "location": "..\\libreria\\California_Uber_Alles.mp3"},

@@ -1,5 +1,5 @@
 import pytest
-from src.unirCancionYLugar import unirCancionYlugar
+from src.funciones.unirCancionYLugar import unirCancionYlugar
 
 
 @pytest.mark.unirCancionYLugar

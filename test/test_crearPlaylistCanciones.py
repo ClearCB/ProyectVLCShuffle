@@ -1,5 +1,5 @@
 import pytest
-from src.crearPlaylistCanciones import crearPlaylistCanciones
+from src.funciones.crearPlaylistCanciones import crearPlaylistCanciones
 
 listaCanciones =  ["California Uber Alles","Elvis' Flaming Star","King Kunta","Against the moon","Headless"]
 

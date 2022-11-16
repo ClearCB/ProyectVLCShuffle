@@ -1,34 +1,34 @@
 import subprocess
 import random
 
-from funciones.conseguirLugarCanciones import conseguirLugarCanciones
 from funciones.crearListaCanciones import crearListaCanciones
 from funciones.crearPlaylistCanciones import crearPlaylistCanciones
-from funciones.lanzarVLC import lanzarVLC
 from funciones.ordenarPlaylistAleatorio import crearPlaylistRandom
+from funciones.conseguirLugarCanciones import conseguirLugarCanciones
 from funciones.unirCancionYLugar import unirCancionYlugar
+from funciones.lanzarVLC import lanzarVLC
 
-def playAll (libreria):
+def playAll (libreriaVar):
 
-    conseguirLugarCanciones(libreria)
-    crearPlaylistRandom(libreria)
-    crearPlaylistCanciones(libreria)
-    crearListaCanciones(libreria)
-    unirCancionYlugar(libreria)
-    lanzarVLC(libreria)
-
+    ListaCanciones = crearListaCanciones(libreriaVar) 
+    PlaylistCanciones = crearPlaylistCanciones(ListaCanciones)
+    PlaylistRandom = crearPlaylistRandom(PlaylistCanciones)
+    LugarCanciones = conseguirLugarCanciones(libreriaVar)
+    PlaylistFinal = unirCancionYlugar(PlaylistRandom,LugarCanciones)
+    LanzarVLC = lanzarVLC (PlaylistFinal)
+    
 
 
 
 if __name__ == "__main__":
 
-    libreria = {"California Uber Alles":
+    libreriaVar = {"California Uber Alles":
                 {"track-number": 2, "location": "C:/Users/abelc/Desktop/PROYECTO-PYTHO/libreria/California_Uber_Alles.mp3"},
-            "Elvis' Flaming Star": 
+            "King_Kunta": 
                 {"track-number": 5, "location": "C:/Users/abelc/Desktop/PROYECTO-PYTHO/libreria/King_Kunta.mp3"},
             "Against the moon":
                 {"track-number": 1, "location": "C:/Users/abelc/Desktop/PROYECTO-PYTHO/libreria/against_the_moon.mp3"},
             "Headless":
                 {"track-number": 4,  "location": "C:/Users/abelc/Desktop/PROYECTO-PYTHO/libreria/Headless.mp3"}
             }
-    playAll(libreria)
+    playAll(libreriaVar)

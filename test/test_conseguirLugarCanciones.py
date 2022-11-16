@@ -1,5 +1,5 @@
 import pytest
-from src.conseguirLugarCanciones import conseguirLugarCanciones
+from src.funciones.conseguirLugarCanciones import conseguirLugarCanciones
 
 libreria = {"California Uber Alles":
                 {"track-number": 2, "location": "..\\libreria\\California_Uber_Alles.mp3"},
