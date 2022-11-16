@@ -1,5 +1,5 @@
 import pytest
-from programs.conseguirLugarCanciones import conseguirLugarCanciones
+from src.conseguirLugarCanciones import conseguirLugarCanciones
 
 libreria = {"California Uber Alles":
                 {"track-number": 2, "location": "..\\libreria\\California_Uber_Alles.mp3"},
@@ -13,7 +13,7 @@ libreria = {"California Uber Alles":
                 {"track-number": 4,  "location": "..\\libreria\\Headless.mp3"}
             }
 
-# @pytest.mark.conseguirLugarCanciones
+@pytest.mark.conseguirLugarCanciones
 def test_conseguirLugarCanciones():
 
     rutaDicc = {'California Uber Alles':'..\\libreria\\California_Uber_Alles.mp3', 

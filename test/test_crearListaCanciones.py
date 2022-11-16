@@ -1,5 +1,5 @@
 import pytest
-from programs.crearListaCanciones import crearListaCanciones
+from src.crearListaCanciones import crearListaCanciones
 
 libreria = {"California Uber Alles":
                 {"track-number": 2, "location": "..\\libreria\California_Uber_Alles.mp3"},
@@ -13,7 +13,7 @@ libreria = {"California Uber Alles":
                 {"track-number": 4,  "location": "..\\libreria\Headless.mp3"}
             }
 
-# @pytest.mark.crearListaCancionUno
+@pytest.mark.crearListaCancionUno
 def test_crearListaCanciones():
 
     assert crearListaCanciones(libreria) == ["California Uber Alles","Elvis' Flaming Star","King Kunta","Against the moon","Headless"]

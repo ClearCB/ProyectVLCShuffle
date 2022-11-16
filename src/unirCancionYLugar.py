@@ -5,6 +5,11 @@ def unirCancionYlugar(playlistRandom, diccionarioLugar):
     playlistYLugar = {}
     playlistLugarYPos = {}
 
+    indexListRandom = list(playlistRandom.keys())
+    index = 0
+    indexSelect = indexListRandom[index]
+
+
     for i in playlistRandom:
 
         tituloCancion = playlistRandom[i]
@@ -13,12 +18,13 @@ def unirCancionYlugar(playlistRandom, diccionarioLugar):
 
         playlistYLugar[tituloCancion] = lugarCancion
 
-    index = 1
 
     for i in playlistYLugar:
 
-        playlistLugarYPos[index] = {i:playlistYLugar[i]}
-        index += 1
+        indexSelect = indexListRandom[index]
+        playlistLugarYPos[indexSelect] = {i:playlistYLugar[i]}
+        index +=1
+
 
     return playlistLugarYPos
 
@@ -28,5 +34,3 @@ if __name__ == "__main__":
     playlistRandom = {2: 'California Uber Alles', 1: "Elvis' Flaming Star", 3: 'King Kunta', 4: 'Against the moon', 5: 'Headless'}
 
     diccionarioLugar = {'California Uber Alles': '.\\libreria\\California_Uber_Alles.mp3', "Elvis' Flaming Star": ".\\libreria\\Elvis' Flaming Star.flac", 'King Kunta': '.\\libreria\\King_Kunta.mp3', 'Against the moon': '.\\libreria\\against the moon.mp3', 'Headless': '.\\libreria\\Headless.mp3'}
-
-    unirCancionYlugar ( playlistRandom, diccionarioLugar)
