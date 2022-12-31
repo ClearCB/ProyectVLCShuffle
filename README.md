@@ -8,4 +8,4 @@ Para este proyecto es necesario tener instalado la aplicacion vlc y adaptar las 
 
 Se utilizan las librerias pytest, random y subprocess, asi que es importante asegurarse que estan instaladas previas a la ejecucion del programa.
 
-Para conseguir que se ejecute correctamente, es necesario tener un diccionario con las canciones y sus ubicaciones en el dispositivo.
+Para conseguir que se ejecute correctamente, es necesario tener un diccionario con las canciones y sus ubicaciones en el dispositivo, y añadir dicha informacion a la ejecucion en el archivo "main.py"
