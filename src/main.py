@@ -1,10 +1,10 @@
 
-from funciones.crearListaCanciones import crearListaCanciones
-from funciones.crearPlaylistCanciones import crearPlaylistCanciones
-from funciones.ordenarPlaylistAleatorio import crearPlaylistRandom
-from funciones.conseguirLugarCanciones import conseguirLugarCanciones
-from funciones.unirCancionYLugar import unirCancionYlugar
-from funciones.lanzarVLC import lanzarVLC
+from utilities.crearListaCanciones import crearListaCanciones
+from utilities.crearPlaylistCanciones import crearPlaylistCanciones
+from utilities.ordenarPlaylistAleatorio import crearPlaylistRandom
+from utilities.conseguirLugarCanciones import conseguirLugarCanciones
+from utilities.unirCancionYLugar import unirCancionYlugar
+from utilities.lanzarVLC import lanzarVLC
 
 def playAll (libreriaVar):
 
